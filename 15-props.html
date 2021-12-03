@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        
+    </div>
+    
+    <script type="text/babel">
+        const courses = [{
+      "id": 1463,
+      "user_id": 27630,
+      "title": "Material UI custom theme với TypeScript",
+      "slug": "material-ui-custom-theme-voi-typescript",
+      "description": null,
+      "meta_title": "Material UI custom theme với TypeScript",
+      "meta_description": "Custom theme Material UI với TypeScript đơn giản, hiệu quả..",
+      "photo": "blog_posts/1463/61a1bbd228640.jpg",
+      "thumbnail": "blog_posts/1463/61a1bbd28851c.jpg",
+      "min_read": 1,
+      "published_at": "2021-11-27 12:02:10",
+      "is_approved": true,
+      "created_at": "2021-11-27T04:39:59.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1463/61a1bbd228640.jpg",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1463/61a1bbd28851c.jpg",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 27630,
+        "username": "tiep-le",
+        "first_name": "Tiep",
+        "last_name": "Le",
+        "avatar": "https://graph.facebook.com/1891289944342922/picture?width=400&height=400",
+        "name": "Tiep Le",
+        "avatar_cdn": "https://graph.facebook.com/1891289944342922/picture?width=400&height=400"
+      }
+    },
+    {
+      "id": 1385,
+      "user_id": 26483,
+      "title": "ES7 React/Redux/GraphQL/React-Native snippets\nv3. Cách tạo một component nhanh chóng chỉ bằng 3 ký tự",
+      "slug": "es7-reactreduxgraphqlreact-native-snippets-v3-cach-tao-mot-component-nhanh-c-1",
+      "description": null,
+      "meta_title": "ES7 React/Redux/GraphQL/React-Native snippets\nv3. Cách tạo một component nhanh chóng ",
+      "meta_description": "Như chúng ta đã biết việc tạo một component nhiều lúc cũng khá mất nhiều thời gian nên mình xin giới thiệu extention này cho...",
+      "photo": "blog_posts/1385/6197a09ddf4fb.png",
+      "thumbnail": "blog_posts/1385/6197a09e60b56.png",
+      "min_read": 1,
+      "published_at": "2021-11-19 20:03:26",
+      "is_approved": true,
+      "created_at": "2021-11-19T12:45:07.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1385/6197a09ddf4fb.png",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1385/6197a09e60b56.png",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 26483,
+        "username": "lnn-vlogs",
+        "first_name": "LNN",
+        "last_name": "Vlogs",
+        "avatar": "https://avatar-redirect.appspot.com/google/102998001516789605800?size=400",
+        "name": "LNN Vlogs",
+        "avatar_cdn": "https://avatar-redirect.appspot.com/google/102998001516789605800?size=400"
+      }
+    },
+    {
+      "id": 1355,
+      "user_id": 1,
+      "title": "Tại sao nên thêm rel=\"noopener\" khi sử dụng target=\"_blank\"?",
+      "slug": "tai-sao-nen-them-relnoopener-khi-su-dung-target-blank",
+      "description": null,
+      "meta_title": "Tại sao nên thêm rel=\"noopener\" khi sử dụng target=\"_blank\"?",
+      "meta_description": "Như các bạn đã biết chúng ta sẽ sử dụng target=\"_blank\" cho thẻ a để khi người dùng click vô sẽ mở liên kết trên một tab mới...",
+      "photo": "blog_posts/1355/619482df2e933.jpg",
+      "thumbnail": "blog_posts/1355/619482df77279.jpg",
+      "min_read": 1,
+      "published_at": "2021-11-17 11:19:43",
+      "is_approved": true,
+      "created_at": "2021-11-17T04:02:04.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1355/619482df2e933.jpg",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1355/619482df77279.jpg",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 1,
+        "username": "son-dang",
+        "first_name": "Sơn",
+        "last_name": "Đặng",
+        "avatar": "user_avatars/1/615f31cb28848.jpg",
+        "name": "Sơn Đặng",
+        "avatar_cdn": "https://cdn.fullstack.edu.vn/f8-learning/user_avatars/1/615f31cb28848.jpg"
+      }
+    },
+    {
+      "id": 1073,
+      "user_id": 44399,
+      "title": "TyperScript là gì, Vì sao nên dùng TyperScript",
+      "slug": "typerscript-la-gi-vi-sao-nen-dung-typerscript",
+      "description": null,
+      "meta_title": "TyperScrip là gì, Vì sao nên dùng TyperScript",
+      "meta_description": "Link khóa học cho anh em nào tò mò ( Đừng lo vì tất cả đều miễn...",
+      "photo": "blog_posts/1073/6179eca886d21.jpg",
+      "thumbnail": "blog_posts/1073/6179eca8efb18.jpg",
+      "min_read": 6,
+      "published_at": "2021-10-28 07:19:53",
+      "is_approved": true,
+      "created_at": "2021-10-28T00:16:19.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1073/6179eca886d21.jpg",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1073/6179eca8efb18.jpg",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 44399,
+        "username": "long-hd",
+        "first_name": "Long",
+        "last_name": "HD",
+        "avatar": "https://avatar-redirect.appspot.com/google/107399353614086722090?size=400",
+        "name": "Long HD",
+        "avatar_cdn": "https://avatar-redirect.appspot.com/google/107399353614086722090?size=400"
+      }
+    },
+    {
+      "id": 1069,
+      "user_id": 6061,
+      "title": "Xử lý bất đồng bộ trong Javascript - Phần 2 ",
+      "slug": "xu-ly-bat-dong-bo-trong-javascript-phan-2",
+      "description": null,
+      "meta_title": "Xử lý bất đồng bộ trong Javascript (phần 2)",
+      "meta_description": "Async/await là cơ chế giúp bạn thực thi các thao tác bất đồng bộ một cách tuần tự hơn , giúp đoạn code nhìn qua tưởng như đồng...",
+      "photo": "blog_posts/1069/617946eca2bdf.jpg",
+      "thumbnail": "blog_posts/1069/617946ecf0f63.jpg",
+      "min_read": 1,
+      "published_at": "2021-10-27 19:32:45",
+      "is_approved": true,
+      "created_at": "2021-10-27T12:25:34.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1069/617946eca2bdf.jpg",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1069/617946ecf0f63.jpg",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 6061,
+        "username": "hoang-nguyen-18",
+        "first_name": "Nguyên",
+        "last_name": "Đinh",
+        "avatar": "https://avatar-redirect.appspot.com/google/100871953915008989470?size=400",
+        "name": "Nguyên Đinh",
+        "avatar_cdn": "https://avatar-redirect.appspot.com/google/100871953915008989470?size=400"
+      }
+    },
+    {
+      "id": 1027,
+      "user_id": 26348,
+      "title": "[Phần 1]Routing trong reactjs",
+      "slug": "phan-1routing-trong-reactjs-1",
+      "description": null,
+      "meta_title": "[Phần 1]Routing trong reactjs",
+      "meta_description": "Hôm nay chúng ta sẽ cùng nhau tìm hiểu cách routing trong reactjs qua thư viện react-router-dom. Hy vọng được thảo luận cùng anh em f8 đang học reactjs. Không đ",
+      "photo": "blog_posts/1027/6174b33191e7d.png",
+      "thumbnail": "blog_posts/1027/6174b331c4b4f.png",
+      "min_read": 5,
+      "published_at": "2021-10-24 08:13:21",
+      "is_approved": true,
+      "created_at": "2021-10-24T01:11:25.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1027/6174b33191e7d.png",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1027/6174b331c4b4f.png",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 26348,
+        "username": "long-nguyen-37",
+        "first_name": "Long",
+        "last_name": "Nguyen",
+        "avatar": "https://avatar-redirect.appspot.com/google/115663409059082752836?size=400",
+        "name": "Long Nguyen",
+        "avatar_cdn": "https://avatar-redirect.appspot.com/google/115663409059082752836?size=400"
+      }
+    },
+    {
+      "id": 1021,
+      "user_id": 26348,
+      "title": "Lập trình hướng đối tượng oop",
+      "slug": "lap-trinh-huong-doi-tuong-oop",
+      "description": null,
+      "meta_title": "Lập trình hướng đối tượng oop",
+      "meta_description": "Hôm nay mình sẽ chia sẻ 1 chủ đề vô cùng quen thuộc với hầu hết các lập trình viên - Lập trình hướng đối tượng(định nghĩa, 4 tính chất oop, ví dụ demo). Hy vọng",
+      "photo": "blog_posts/1021/6173be682d527.jpg",
+      "thumbnail": "blog_posts/1021/6173be68944ad.jpg",
+      "min_read": 9,
+      "published_at": "2021-10-23 14:48:56",
+      "is_approved": true,
+      "created_at": "2021-10-23T06:00:28.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1021/6173be682d527.jpg",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1021/6173be68944ad.jpg",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 26348,
+        "username": "long-nguyen-37",
+        "first_name": "Long",
+        "last_name": "Nguyen",
+        "avatar": "https://avatar-redirect.appspot.com/google/115663409059082752836?size=400",
+        "name": "Long Nguyen",
+        "avatar_cdn": "https://avatar-redirect.appspot.com/google/115663409059082752836?size=400"
+      }
+    },
+    {
+      "id": 1017,
+      "user_id": 6061,
+      "title": "Xử Lý Bất Đồng Bộ Trong Javascript - Phần 1",
+      "slug": "xu-ly-bat-dong-bo-trong-javascript-phan-1",
+      "description": null,
+      "meta_title": "Xử Lý Bất Đồng Bộ Trong Javascript - Phần 1",
+      "meta_description": "Chắc chắn khi lập trình, bạn sẽ có các công việc cần thời gian delay (gọi API, lấy dữ liệu từ Database, đọc/ghi file,...). Và đây...",
+      "photo": "blog_posts/1017/6172259a3e59f.png",
+      "thumbnail": "blog_posts/1017/6172259ab8b80.png",
+      "min_read": 8,
+      "published_at": "2021-10-22 09:44:43",
+      "is_approved": true,
+      "created_at": "2021-10-22T02:21:17.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1017/6172259a3e59f.png",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/1017/6172259ab8b80.png",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 6061,
+        "username": "hoang-nguyen-18",
+        "first_name": "Nguyên",
+        "last_name": "Đinh",
+        "avatar": "https://avatar-redirect.appspot.com/google/100871953915008989470?size=400",
+        "name": "Nguyên Đinh",
+        "avatar_cdn": "https://avatar-redirect.appspot.com/google/100871953915008989470?size=400"
+      }
+    },
+    {
+      "id": 989,
+      "user_id": 1,
+      "title": "[Vlog] Review tất cả đồ mình sử dụng cho F8",
+      "slug": "vlog-review-tat-ca-do-minh-su-dung-cho-f8",
+      "description": null,
+      "meta_title": "[Vlog] Review tất cả đồ mình sử dụng cho F8",
+      "meta_description": "Chào các bạn, mình mới ra video giới thiệu về các đồ đạc mình có sử dụng phục cho việc làm video trên...",
+      "photo": "blog_posts/989/616fc1edd9a96.jpg",
+      "thumbnail": "blog_posts/989/616fc1ee52039.jpg",
+      "min_read": 2,
+      "published_at": "2021-10-20 14:14:54",
+      "is_approved": true,
+      "created_at": "2021-10-20T07:06:50.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/989/616fc1edd9a96.jpg",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/989/616fc1ee52039.jpg",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 1,
+        "username": "son-dang",
+        "first_name": "Sơn",
+        "last_name": "Đặng",
+        "avatar": "user_avatars/1/615f31cb28848.jpg",
+        "name": "Sơn Đặng",
+        "avatar_cdn": "https://cdn.fullstack.edu.vn/f8-learning/user_avatars/1/615f31cb28848.jpg"
+      }
+    },
+    {
+      "id": 923,
+      "user_id": 26348,
+      "title": "[Cơ bản] Life cycle của Component trong Reactjs",
+      "slug": "co-ban-life-cycle-cua-component-trong-reactjs",
+      "description": null,
+      "meta_title": "[Cơ bản] Life cycle của Component trong Reactjs",
+      "meta_description": "Chào anh Sơn và...",
+      "photo": "blog_posts/923/6169a3ea51b04.png",
+      "thumbnail": "blog_posts/923/6169a3eaa8c07.png",
+      "min_read": 3,
+      "published_at": "2021-10-15 22:53:14",
+      "is_approved": true,
+      "created_at": "2021-10-15T14:53:53.000000Z",
+      "photo_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/923/6169a3ea51b04.png",
+      "thumbnail_cdn": "https://cdn.fullstack.edu.vn/f8-learning/blog_posts/923/6169a3eaa8c07.png",
+      "is_bookmark": false,
+      "is_published": true,
+      "user": {
+        "id": 26348,
+        "username": "long-nguyen-37",
+        "first_name": "Long",
+        "last_name": "Nguyen",
+        "avatar": "https://avatar-redirect.appspot.com/google/115663409059082752836?size=400",
+        "name": "Long Nguyen",
+        "avatar_cdn": "https://avatar-redirect.appspot.com/google/115663409059082752836?size=400"
+      }
+    }
+  ]
+        function CourseItem({
+            image,
+            title,
+            description,
+            subtitle,
+        }){
+            return (
+                <div>
+                    <img src={image} alt=""/>
+                        <h2>{title}</h2>
+                        <p>{description}</p>
+                        <span>{subtitle}</span>
+                </div>);
+        }
+        function App(){
+            return (<div id = "wrapper ">
+                {
+                    courses.map(function(course){
+                        return(<CourseItem
+                        title={course.title}
+                        image={course.thumbnail_cdn}
+                        description={course.description}
+                        subtitle={course.meta_title}                        
+                        />)
+                    })
+                }            
+            </div>);
+        }
+        ReactDOM.render(<App/>, document.getElementById('root'))
+    </script>
+</body>
+
+</html>
