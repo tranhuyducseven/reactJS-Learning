@@ -300,23 +300,28 @@
       }
     }
   ]
-        function CourseItem({course}){          
+  function CourseItem({course, onClick}){          
             return (
                 <div>
                     <img src={course.thumbnail_cdn} alt=""/>
-                        <h2>{course.title}</h2>
+                        <h2 onClick={()=>onClick(course)}>Course{course.title}</h2>
                         <p>{course.description}</p>
                         <span>{course.meta_description}</span>
+                        
                 </div>
                 );
         }
         function App(){
+            const handleClick = (course) =>{
+                alert(course.title);
+            }
             return (<div id = "wrapper ">
                 {
                     courses.map(function(course){
                         return(<CourseItem
                         key={course.id}
-                       course={course}                   
+                       course={course}
+                       onClick ={handleClick}                   
                         />)
                     })
                 }            
