@@ -36,7 +36,14 @@ function Content(){
         }
     })
     useEffect(()=>{
-        
+        const handleResize = () =>{
+           setWidth(window.innerWidth);           
+        }
+        window.addEventListener('resize', handleResize);
+        //clean up 
+        return ()=>{
+            window.removeEventListener('resize', handleResize);
+        }
     })
     return(
         <div>
