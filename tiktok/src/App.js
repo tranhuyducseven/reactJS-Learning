@@ -8,28 +8,36 @@ const courses = [
 
 
 function App() {
-const [checked, setChecked] = useState();
+
+
+
+const [job, setJob] = useState('');
+const [jobs, setJobs]= useState(()=>{ 
+  const storageJobs =JSON.parse( localStorage.getItem('jobs'));
+  return storageJobs??[];
+});
 const handleSubmit = () => {
-  console.log({id: checked})
+  setJobs(prev =>{
+    const newJobs = [...prev, job]
+    const jsonJobs = JSON.stringify(newJobs);
+    localStorage.setItem('jobs', jsonJobs);
+    return newJobs;
+  });
+  setJob('');
 }
 return (
   <div style={{padding:32}}>
-  {
-    courses.map((course) =>(
-      <div key={course.id}>
-      <input
-          type="radio"
-          checked={checked===course.id}
-          onChange={()=>setChecked(course.id)}  
+    <input value={job} onChange={(e) => setJob(e.target.value)}/>
+    <button onClick={handleSubmit}>Add</button>
+    <ul>
+      {
+        jobs.map((job, index) =>
+        <li key={index}>{job}</li>)
+      }
+
+    </ul>
+         
       
-      />
-      {course.name}      
-      </div>
-     
-    ))
-    
-  }
-  <button onClick={()=>handleSubmit()}>Submit</button>
   
   
   </div>
