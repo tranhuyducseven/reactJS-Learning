@@ -9,18 +9,59 @@
 //1. callback luon duoc goi sau khi component duoc mounted
 //2. Cleanup function luon duoc goi truoc khi component unmounted
 import {useEffect, useState} from 'react'
+const blockChats = [
+    {
+        id:1,
+        name: '#gaming'
+    },
+    {
+        id:2,
+        name: '#basketball'
+    },
+    {
+        id:3,
+        name: '#volleyball'
+    },
+    {
+        id:4,
+        name: '#learn reactJS'
+    },
+]
 function Content(){
-    const [countdown, setCountdown] =  useState(180);
-    useEffect(() => {
-        const timerId =setInterval(() =>{
-            setCountdown(prev=>prev -1);
-         }, 1000)
-         return () => clearInterval(timerId);
-    },[])
+    const [blockChatId, setBlockChatId] = useState(1);
+    const [chats, setChats] = useState('');
+    useEffect(() =>{ 
+        const handleChats = ({detail}) =>{
+            console.log(detail);
+            setChats(detail);
+        }
+
+        window.addEventListener(`blockChat-${blockChatId}`, handleChats);
+        return () =>{
+            window.removeEventListener(`blockChat-${blockChatId}`, handleChats);
+        }
+    },[blockChatId])
     return(
         <div>
-            <h1>{countdown}</h1>
+            <ul style={{listStyle: 'none'}}>{
+                blockChats.map( blockChat =>(
+                    <li 
+                        key={ blockChat.id}
+                        style={{
+                            cursor: 'pointer',
+                            color:blockChatId ===  blockChat.id ?
+                             'red' :
+                             '#333'
+                            }}
+                        onClick={() =>setBlockChatId( blockChat.id)}
+                        >{ blockChat.name}</li>
+                ))
+            }</ul>
+            <p>
+            {chats}
+            </p>
         </div>
+        
     )
 }
 export default Content;

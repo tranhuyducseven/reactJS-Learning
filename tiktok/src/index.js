@@ -3,7 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//fake chats
 
+function emitChats(id){
+ setInterval(()=>{ 
+   window.dispatchEvent(
+     new CustomEvent(`blockChat-${id}`,
+     {
+       detail: `All chat of block - ${id}`,
+     })
+   );
+
+ },2000)
+}
+emitChats(1);
+emitChats(2);
+emitChats(3);
 ReactDOM.render(
   <React.StrictMode>
     <App />
