@@ -1,16 +1,6 @@
 import {useState} from 'react'
-const courses = [
-  {id: 1, name: 'HTML CSS'},
-  {id: 2, name: 'JS'},
-  {id: 3, name: 'reactJS'}, 
-
-]
-
 
 function App() {
-
-
-
 const [job, setJob] = useState('');
 const [jobs, setJobs]= useState(()=>{ 
   const storageJobs =JSON.parse( localStorage.getItem('jobs'));
