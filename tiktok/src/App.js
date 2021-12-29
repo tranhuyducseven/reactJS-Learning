@@ -1,43 +1,40 @@
-import {useState} from 'react'
-const courses = [
-  {id: 1, name: 'HTML CSS'},
-  {id: 2, name: 'JS'},
-  {id: 3, name: 'reactJS'}, 
+import { Routes, Route, Link } from 'react-router-dom';
 
-]
+
+import HomePage from './pages/Home'
+import News from './pages/News'
+import Contact from './pages/Contact'
+
 
 
 function App() {
-const [checked, setChecked] = useState();
-const handleSubmit = () => {
-  console.log({id: checked})
+
+  return (
+    <div className="app">
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/news">News</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/news" element={<News />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+      </nav>
+    </div>
+  )
+
 }
-return (
-  <div style={{padding:32}}>
-  {
-    courses.map((course) =>(
-      <div key={course.id}>
-      <input
-          type="radio"
-          checked={checked===course.id}
-          onChange={()=>setChecked(course.id)}  
-      
-      />
-      {course.name}      
-      </div>
-     
-    ))
-    
-  }
-  <button onClick={()=>handleSubmit()}>Submit</button>
-  
-  
-  </div>
-)
 
- }
 
- 
 
 
 export default App;
